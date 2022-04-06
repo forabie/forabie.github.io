@@ -11,13 +11,10 @@
     --txt-color: #444;
 }
 
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
 body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     background-color: var(--bg-color);
     display: flex;
     align-items: center;
@@ -66,10 +63,11 @@ body {
 
 .letter {
     position: absolute;
-    right: 15%;
+    z-index: 1;
+    right: 20%;
     bottom: 0;
-    width: 70%;
-    height: 90%;
+    width: 54%;
+    height: 80%;
     background-color: var(--primary);
     transition: all 1s ease-in-out;
     padding: 20px 10px;
@@ -115,16 +113,16 @@ body {
     right: 7.5px;
 }
 
-.flap > .envelope .letter {
-    bottom: 100px;
-    transform: scale(1.2);
-    transition-delay: 1s;
-    z-index: 2;
-}
-
 .flap > .envelope::before {
     z-index: 0;
     transform: rotateX(180deg);
+}
+
+.flap > .envelope > .letter {
+    bottom: 100px;
+    transform: scale(1.5);
+    transition-delay: 1s;
+    z-index: 2;
 }
 
 .flap > .flower {
@@ -132,3 +130,16 @@ body {
     transition-delay: 0.4s;
 }
 
+.footer {
+    position: fixed;
+    font-size: 15px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    background-color: #957fef;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }

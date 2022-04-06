@@ -6,24 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>For Abie</title>
     <link rel="stylesheet" href="/assets/css/main.css">
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="/assets/js/jquery.vide.js"></script>
 </head>
 <body>
-    <div class="container">
-        <div class="envelope-wrapper">
-            <div class="envelope">
-                <div class="letter">
-                    <div class="letter__content">
-                        <strong>Happy Anniversary! 🎊🎉</strong>
-                        <p>
-                            Akalain mo, 1 year na tayo. Himala natitiis mo ang aking kagaguhan HAHA de jk lang, Pero salamat talaga at natiis moko. Palagi mong tandaan na mahal kita.
-                        </p>
+    <div class="wrapper" style="width: 100vw"
+    data-vide-bg="img/lilac.gif" data-vide-options="bgColor: '#b79ced'">
+        <div class="container">
+            <div class="envelope-wrapper">
+                <div class="envelope">
+                    <div class="letter">
+                        <div class="letter__content">
+                            <strong>Happy Anniversary! 🎊🎉</strong>
+                            <p>
+                                Akalain mo, 1 year na tayo. Himala natitiis mo ang aking kagaguhan HAHA de jk lang, Pero salamat talaga at natiis moko. Palagi mong tandaan na mahal kita.
+                            </p>
+                        </div>
                     </div>
                 </div>
+                <div class="flower"></div>
             </div>
-            <div class="flower"></div>
         </div>
+        <a href="/msg.html" class="footer">
+            Click me after reading your envelope ٩(◕‿◕｡)۶
+        </a>
     </div>
-
-    <script src="/assets/js/main.js"></script>
+    <script>
+        const envelope = document.querySelector('.envelope-wrapper');
+        envelope.addEventListener('click', () => {
+            envelope.classList.toggle('flap');
+        })
+    </script>
 </body>
 </html>
